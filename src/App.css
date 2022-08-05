@@ -1,38 +1,317 @@
-.App {
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+#root{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body{
+  font-family: 'Montserrat';
+}
+
+.titleBar{
+  background: #111111;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+}
+
+.title{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  color: #FFF;
+}
+
+.header{
+  background: #111111;
+  text-align: center;
+  width: 100%;
+  display:block;
+}
+
+.headerText{
+  padding-top: 25px;
+  padding-bottom: 45px;
+  padding-left: 100px;
+  padding-right: 100px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+
+  text-align: center;
+
+  color: #FFFFFF;
+}
+b{
+  color: #FFC700;
+}
+
+.ctaContainer{
+  padding-bottom: 50px;
+}
+
+.cta{
+  width: 200px;
+  height: 45px;
+
+  background: #FFC700;
+  border-radius: 5px;
+  border: 0px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+
+.formInput{
+  display: inline-flex;
+  text-align: center;
+  width: 100%;
+}
+
+
+
+
+.numOfImages{
+  display: block;
+  padding-top: 20px;
+  text-align: center;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: inherit;
+}
+
+.alphabetLabel{
+  display: block;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  width: inherit;
+}
+
+.numOfImagesLabel{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #000000;
+}
+
+.alphabetInputLabel{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  margin-top: auto;
+  color: #000000;
+}
+
+.numOfImagesField{
+  width: 200px;
+  height: 40px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+}
+
+.alphabetField{
+  width: 200px;
+  height: 45px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+}
+
+.submit{
+  width: 200px;
+  height: 46px;
+  left: 656px;
+  top: 272px;
+
+  background: #FFC700;
+  border-radius: 5px;
+  border: 2px solid #000000;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.cta:hover, .submit:hover{
+  background: #FFB900;
+  cursor: pointer;
+}
+
+
+.submitButtonContainer{
+  width: inherit;
+  height: inherit;
+  margin-top: auto;
+}
+
+.errorLabelContainer{
+  width: inherit;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.errorLabel{
+  color: red;
+  font-family: 'Roboto Mono';
+  font-size: 16px;
+}
+
+.errorBorder{
+  border:2px solid red;
+}
+
+.footer{
+  bottom: 0;
+  background: #111111;
+  padding: 0px;
+  text-align: center;
+  width: 100%;
+  height: fit-content;
+  margin-top: auto;
+}
+
+.projectLinkContainer{
+  display:inline-flex;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.projectLinkText{
+  font-weight: 700;
+  color: white;
+  align-items: center;
+  padding-right: 3px;
+}
+
+.githubIconContainer{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.githubIcon{
+  cursor: pointer;
+}
+
+.linkedinIcon{
+  cursor: pointer;
+  padding-right: 5px;
+}
+
+symbol:hover{
+  fill: #FFC700;
+}
+.creatorsText, .mentorText{
+  text-align: left;
+  font-weight: 700;
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+.creatorsContainer, .mentorContainer{
+  width: fit-content;
+  height: inherit;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.name{
+  padding:0px;
+}
+.mentorLink{
+  padding-bottom: 50px;
+}
+.creatorsLink, .mentorLink{
+  display: inline-flex;
+}
+
+.ahris{
+  padding-right: 50px;
+}
+.nawshrvan{
+  padding-right: 50px;
+}
+
+.ruhal{
+  padding-right: 50px;
+}
+
+.sundar{
+  padding-right: 50px;
+}
+.links{
+  display: inline-flex;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.images{
+  flex-grow:1;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.imageHeading{
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+}
+
+.image{
+  padding: 25px;
+}
+
+@media only screen and (max-width: 766px) {
+  .formInput {
+    display: block;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .submitButtonContainer{
+    padding-top: 20px;
+    padding-left: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  .creatorsLink{
+    display: block;
   }
+  .creatorsText{
+    text-align: center;
+  }
+
+  .mentorText{
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  .ahris, .nawshrvan, .ruhal, .sundar{
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+  }
+  .bahawal{
+    padding-top: 10px;
+  }
+
+.headerText{
+  padding-left: 50px;
+  padding-right: 50px;
+}
 }

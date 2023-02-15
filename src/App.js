@@ -24,7 +24,7 @@ function App() {
       console.log(numOfImages,catLabel)
       //send request to the fastapi
       
-      fetch(`https://gan-backend.herokuapp.com/predict/?num_of_examples=${numOfImages}&label=${catLabel}&ip=${ip}`, {
+      fetch(`http://43.206.117.60:5000/predict/?num_of_examples=${numOfImages}&label=${catLabel}&ip=${ip}`, {
           method: 'GET',
         }).then((res) => res.json())
         .then((data) =>{
@@ -57,7 +57,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-        fetch('https://gan-backend.herokuapp.com/categories', {
+        fetch('http://43.206.117.60:5000/categories', {
           method: 'GET',
         }).then((res) => res.json())
         .then((data) =>{
